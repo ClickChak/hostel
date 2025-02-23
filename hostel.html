@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Hostel & Accommodations</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Paradise Hostel</h1>
+        <nav>
+            <ul>
+                <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="#rooms"><i class="fas fa-bed"></i> Rooms</a></li>
+                <li><a href="#amenities"><i class="fas fa-concierge-bell"></i> Amenities</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hidden-left">
+            <h2>Welcome to Paradise</h2>
+            <img src="hostel.jpeg" alt="Hostel Front View">
+            <p>Experience luxury and comfort at affordable prices in our carefully designed spaces. Located in the heart of the city, we offer the perfect blend of comfort and convenience.</p>
+            <button class="cta-button">Book Now</button>
+        </section>
+
+        <section id="about" class="hidden-right">
+            <h2>About Us</h2>
+            <div class="about-content">
+                <img src="about.jpg" alt="About Our Hostel">
+                <p>Established in 2010, Paradise Hostel has been providing exceptional accommodation services to travelers from around the world. Our commitment to quality and comfort makes us the preferred choice for both short and long-term stays.</p>
+                <div class="features">
+                    <div class="feature">
+                        <i class="fas fa-wifi"></i>
+                        <span>Free WiFi</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-coffee"></i>
+                        <span>Breakfast</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-parking"></i>
+                        <span>Parking</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="rooms" class="hidden-left">
+            <h2>Our Rooms</h2>
+            <div class="room-grid">
+                <div class="room-card">
+                    <img src="room2.jpg" alt="Deluxe Room">
+                    <h3>Deluxe Room</h3>
+                    <p>Perfect for solo travelers or couples</p>
+                    <span class="price">From $49/night</span>
+                    <button class="cta-button">Book Now</button>
+                </div>
+                <div class="room-card">
+                    <img src="room1.jpeg" alt="Shared Room">
+                    <h3>Shared Room</h3>
+                    <p>Economic option for backpackers</p>
+                    <span class="price">From $25/night</span>
+                    <button class="cta-button">Book Now</button>
+                </div>
+                <div class="room-card">
+                    <img src="room3.jpeg" alt="Family Suite">
+                    <h3>Family Suite</h3>
+                    <p>Spacious rooms for family stays</p>
+                    <span class="price">From $89/night</span>
+                    <button class="cta-button">Book Now</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="amenities" class="hidden-right">
+            <h2>Amenities</h2>
+            <div class="amenities-grid">
+                <div class="amenity">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Kitchen</h3>
+                    <p>Fully equipped communal kitchen</p>
+                </div>
+                <div class="amenity">
+                    <i class="fas fa-dumbbell"></i>
+                    <h3>Fitness Center</h3>
+                    <p>24/7 access to gym facilities</p>
+                </div>
+                <div class="amenity">
+                    <i class="fas fa-tv"></i>
+                    <h3>Common Room</h3>
+                    <p>Entertainment and social space</p>
+                </div>
+                <div class="amenity">
+                    <i class="fas fa-laptop"></i>
+                    <h3>Work Space</h3>
+                    <p>Dedicated co-working area</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="hidden-left">
+            <h2>Contact Us</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Paradise Street, City, Country</p>
+                    <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+                    <p><i class="fas fa-envelope"></i> info@paradisehostel.com</p>
+                </div>
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit" class="cta-button">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p>&copy; 2023 Paradise Hostel. All rights reserved.</p>
+        </div>
+    </footer>
+    
+<script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            } else {
+                entry.target.classList.remove('show');
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: "-100px"
+    });
+
+    document.querySelectorAll('section').forEach(section => {
+        observer.observe(section);
+    });
+</script>
+
+
+</body>
+</html>
