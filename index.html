@@ -14,7 +14,7 @@
         <nav>
             <ul>
                 <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="#about" id="about-link"><i class="fas fa-info-circle"></i> About</a></li>
                 <li><a href="#rooms"><i class="fas fa-bed"></i> Rooms</a></li>
                 <li><a href="#amenities"><i class="fas fa-concierge-bell"></i> Amenities</a></li>
                 <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
@@ -23,14 +23,14 @@
     </header>
 
     <main>
-        <section id="home" class="hidden-left">
+        <section id="home" class="hidden-left" style="display: block;">
             <h2>Welcome to Paradise</h2>
             <img src="hostel.jpeg" alt="Hostel Front View">
             <p>Experience luxury and comfort at affordable prices in our carefully designed spaces. Located in the heart of the city, we offer the perfect blend of comfort and convenience.</p>
             <button class="cta-button">Book Now</button>
         </section>
 
-        <section id="about" class="hidden-right">
+        <section id="about" class="hidden-right" style="display: none;">
             <h2>About Us</h2>
             <div class="about-content">
                 <img src="about.jpg" alt="About Our Hostel">
@@ -52,7 +52,7 @@
             </div>
         </section>
 
-        <section id="rooms" class="hidden-left">
+        <section id="rooms" class="hidden-left" style="display: none;">
             <h2>Our Rooms</h2>
             <div class="room-grid">
                 <div class="room-card">
@@ -79,7 +79,7 @@
             </div>
         </section>
 
-        <section id="amenities" class="hidden-right">
+        <section id="amenities" class="hidden-right" style="display: none;">
             <h2>Amenities</h2>
             <div class="amenities-grid">
                 <div class="amenity">
@@ -105,7 +105,7 @@
             </div>
         </section>
 
-        <section id="contact" class="hidden-left">
+        <section id="contact" class="hidden-left" style="display: none;">
             <h2>Contact Us</h2>
             <div class="contact-container">
                 <div class="contact-info">
@@ -134,26 +134,6 @@
             <p>&copy; 2023 Paradise Hostel. All rights reserved.</p>
         </div>
     </footer>
-    
-<script>
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('show');
-            } else {
-                entry.target.classList.remove('show');
-            }
-        });
-    }, {
-        threshold: 0.1,
-        rootMargin: "-100px"
-    });
-
-    document.querySelectorAll('section').forEach(section => {
-        observer.observe(section);
-    });
-</script>
-
-
+    <script src="hsjs.js"></script>
 </body>
 </html>
