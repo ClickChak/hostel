@@ -250,6 +250,24 @@ room-card img {
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
+.send-button {
+    background-color: var(--accent);
+    color: var(--white);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.send-button:hover {
+    background-color: var(--secondary);
+    color: var(--dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
 
 footer {
     background-color: var(--dark);
@@ -274,7 +292,6 @@ social-links a:hover {
     color: var(--secondary);
 }
 
-/* Feature Styling */
 .feature {
     display: flex;
     align-items: center;
@@ -453,7 +470,6 @@ section:nth-child(4) { animation-delay: 0.8s; }
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Animation Keyframes */
 @keyframes slideIn {
     from {
         opacity: 0;
@@ -465,7 +481,6 @@ section:nth-child(4) { animation-delay: 0.8s; }
     }
 }
 
-/* Confirmation Modal Styling */
 #confirmation-modal .modal-content {
     text-align: center;
 }
@@ -475,7 +490,6 @@ section:nth-child(4) { animation-delay: 0.8s; }
     margin-top: 1rem;
 }
 
-/* Phone Input Styling */
 .phone-input {
     display: flex;
     gap: 0.5rem;
@@ -489,7 +503,6 @@ section:nth-child(4) { animation-delay: 0.8s; }
     font-size: 1rem;
 }
 
-/* Validation Message Styling */
 input:invalid {
     border-color: var(--accent);
 }
@@ -515,7 +528,6 @@ input:invalid:focus::after {
     display: block;
 }
 
-/* Loading Spinner Styling */
 #loading-spinner {
     position: fixed;
     top: 50%;
