@@ -1,21 +1,4 @@
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-        } else {
-            entry.target.classList.remove('show');
-        }
-    });
-}, {
-    threshold: 0.1,
-    rootMargin: "-100px"
-});
-
-document.querySelectorAll('section').forEach(section => {
-    observer.observe(section);
-});
-
-// Function to show only the selected section
+// Show only the selected section
 function showSection(sectionId) {
     document.querySelectorAll('section').forEach(section => {
         section.style.display = 'none';
@@ -23,7 +6,7 @@ function showSection(sectionId) {
     document.getElementById(sectionId).style.display = 'block';
 }
 
-// event listeners for the navigation links
+// Navigation link events
 document.querySelectorAll('nav a').forEach(link => {
     link.addEventListener('click', function(event) {
         event.preventDefault();
@@ -32,10 +15,10 @@ document.querySelectorAll('nav a').forEach(link => {
     });
 });
 
-// Show the home section by default
+// Default to home section
 showSection('home');
 
-// payment form
+// Payment form logic
 document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('booking-modal');
     const confirmationModal = document.getElementById('confirmation-modal');
@@ -63,20 +46,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Handle booking form submission
+    // Booking form submission
     document.getElementById('booking-form').addEventListener('submit', function(event) {
         event.preventDefault();
         modal.style.display = 'none';
         confirmationModal.style.display = 'block';
+
+        setTimeout(() => {
+            this.submit();
+        }, 2000);
     });
 
-    // Validate mobile number input
+    // Validate phone input
     document.getElementById('phone').addEventListener('input', function(event) {
         const phoneInput = event.target;
         phoneInput.value = phoneInput.value.replace(/\D/g, '').substring(0, 10);
     });
-});
-
-window.addEventListener('load', function() {
-    document.getElementById('loading-spinner').style.display = 'none';
 });
