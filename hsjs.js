@@ -1,4 +1,4 @@
-// Show only the selected section
+
 function showSection(sectionId) {
     document.querySelectorAll('section').forEach(section => {
         section.style.display = 'none';
@@ -6,7 +6,7 @@ function showSection(sectionId) {
     document.getElementById(sectionId).style.display = 'block';
 }
 
-// Navigation link events
+
 document.querySelectorAll('nav a').forEach(link => {
     link.addEventListener('click', function(event) {
         event.preventDefault();
@@ -15,10 +15,10 @@ document.querySelectorAll('nav a').forEach(link => {
     });
 });
 
-// Default to home section
+
 showSection('home');
 
-// Payment form logic
+
 document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('booking-modal');
     const confirmationModal = document.getElementById('confirmation-modal');
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Booking form submission
+    
     document.getElementById('booking-form').addEventListener('submit', function(event) {
         event.preventDefault();
         modal.style.display = 'none';
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 2000);
     });
 
-    // Validate phone input
+    
     document.getElementById('phone').addEventListener('input', function(event) {
         const phoneInput = event.target;
         phoneInput.value = phoneInput.value.replace(/\D/g, '').substring(0, 10);
